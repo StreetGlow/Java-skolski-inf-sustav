@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import tornadofx.control.DateTimePicker?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.java.vjezbe.javafx.IspitController">
+   <center>
+      <BorderPane prefHeight="500.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+         <center>
+            <GridPane BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="112.0" minWidth="0.0" prefWidth="29.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="396.0" minWidth="10.0" prefWidth="336.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="128.0" minWidth="0.0" prefWidth="35.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="212.0" minHeight="10.0" prefHeight="212.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="153.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="202.0" minHeight="10.0" prefHeight="202.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TableView fx:id="ispitTable" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="2">
+                    <columns>
+                      <TableColumn fx:id="predmetIspitColumn" prefWidth="137.0" text="Predmet" />
+                      <TableColumn fx:id="studentIspitColumn" prefWidth="123.0" text="Student" />
+                        <TableColumn fx:id="ocjenaIspitColumn" minWidth="3.0" prefWidth="43.0" text="Ocjena" />
+                        <TableColumn fx:id="datumIVrijemeIspitColumn" prefWidth="96.0" text="Datum i vrijeme" />
+                    </columns>
+                  </TableView>
+                  <GridPane GridPane.columnIndex="1">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="155.0" minWidth="10.0" prefWidth="88.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="169.0" minWidth="10.0" prefWidth="135.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="101.0" minHeight="10.0" percentHeight="40.0" prefHeight="54.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="158.0" minHeight="10.0" percentHeight="15.0" prefHeight="69.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="158.0" minHeight="10.0" percentHeight="15.0" prefHeight="55.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="158.0" minHeight="10.0" percentHeight="15.0" prefHeight="58.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="158.0" minHeight="10.0" percentHeight="15.0" prefHeight="58.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" text="Pretraživanje ispita" textFill="#295187" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font name="Century" size="20.0" />
+                           </font></Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Predmet:" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <font>
+                              <Font name="Century" size="16.0" />
+                           </font></Label>
+                        <Label text="Student:" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                           <font>
+                              <Font name="Century" size="16.0" />
+                           </font></Label>
+                        <Label text="Ocjena:" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                           <font>
+                              <Font name="Century" size="16.0" />
+                           </font></Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Datum i vrijeme:" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                           <font>
+                              <Font name="Century" size="16.0" />
+                           </font></Label>
+                        <DateTimePicker fx:id="datumIVrijemeIspit" format="dd.MM.yyyy.HH:mm" promptText="Odaberi datum" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <ChoiceBox fx:id="predmetIspitBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <ChoiceBox fx:id="studentIspitBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <ChoiceBox fx:id="ocjenaIspitBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     </children>
+                     <GridPane.margin>
+                        <Insets left="18.0" right="18.0" />
+                     </GridPane.margin>
+                  </GridPane>
+                  <Button mnemonicParsing="false" onAction="#pretragaIspit" style=": 2px solid #4CAF50;" text="Pretraga" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets left="75.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Century" size="16.0" />
+                     </font>
+                     <textFill>
+                        <RadialGradient centerX="0.5" centerY="0.5142857142857142" focusAngle="-30.96" radius="1.0">
+                           <stops>
+                              <Stop color="#2b64b5" />
+                              <Stop color="#295187" offset="0.007662835249042145" />
+                              <Stop color="#295187" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#obrisiZapisIspita" style=": 2px solid #4CAF50;" text="Obriši" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Century" size="16.0" />
+                     </font>
+                     <textFill>
+                        <RadialGradient centerX="0.5" centerY="0.5142857142857142" focusAngle="-30.96" radius="1.0">
+                           <stops>
+                              <Stop color="#2b64b5" />
+                              <Stop color="#295187" offset="0.007662835249042145" />
+                              <Stop color="#295187" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                  </Button>
+               </children>
+            </GridPane>
+         </center>
+      </BorderPane>
+   </center>
+</BorderPane>

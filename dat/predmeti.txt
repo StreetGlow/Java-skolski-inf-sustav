@@ -1,0 +1,36 @@
+1
+JP123
+JAVA programiranje
+5
+1
+1 2
+2
+OOP123
+Objektno orjentirano programiranje
+4
+2
+0
+3
+SPO123
+Sustavi za potporu u odluèivanju
+4
+2
+0
+4
+JP123
+Programiranje C#
+5
+3
+3 4
+5
+UPP123
+Upravljanje procesima u poslovanju
+3
+4
+0
+6
+SNW123
+Sigurnost na WEB-u
+3
+4
+0

@@ -1,0 +1,77 @@
+.menu .label
+{
+	-fx-font-size: 12 pt;
+    -fx-font-family: "Lucida Console";
+    -fx-text-fill: white;
+}
+
+.menu {
+   
+}
+
+.menu .context-menu {
+    -fx-background-color: black;
+}
+
+.menu:hover{
+    -fx-background-color: #346DDA;
+}
+
+.menu-item:hover{
+    -fx-background-color: #346DDA;
+}
+
+.button{
+	-fx-border-radius: 10px;
+	-fx-background-radius: 10px;
+	-fx-background-color: black;
+	-fx-border-color: white;
+	-fx-border-width: 2px;
+	-fx-text-fill: white;
+}
+
+.button:hover{
+    -fx-background-color: #346DDA;
+}
+
+.label{
+	-fx-text-fill: white;
+}
+
+.table-column .label{
+	-fx-text-fill: white;
+	-fx-background-color: transparent;
+}
+
+.choice-box .label{ 
+	-fx-text-fill: black;
+}
+
+.choice-box .context-menu { 
+	-fx-background-color: lightgrey;
+	-fx-border-color: #6CBCD7;
+	-fx-border-width: 2px;
+}
+
+.choice-box .menu-item:focused { 
+	-fx-background-color: #346DDA;
+}
+
+.choice-box .menu-item > .label { 
+	-fx-text-fill: black;
+}
+
+.table-view{
+	/*-fx-base: transparent;*/
+    -fx-background-color: black;
+}
+
+.table-cell {
+    -fx-border-color: black;
+    -fx-text-fill: black;
+    -fx-border-width: 0.8px;
+}
+
+.table-view .column-header{
+    -fx-background-color: black;
+}
